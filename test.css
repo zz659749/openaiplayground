@@ -71,3 +71,41 @@ p {
 .inner-wrapper li:nth-child(6) {
     color: #2196F3;
 }
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.italic-circle {
+    font-style: italic;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    position: relative;
+}
+
+.italic-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Change this */
+    left: 100%; /* Change this */
+    margin-left: 5px; /* Add this */
+    transform: translateY(-50%); /* Add this */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid red; /* Change this */
+    border-bottom: none; /* Change this */
+}

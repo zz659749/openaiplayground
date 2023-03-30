@@ -1,0 +1,73 @@
+.outer-wrapper {
+    background-color: pink;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* ... (previous CSS code) ... */
+
+.inner-wrapper ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Add this */
+    flex-wrap: wrap; /* Add this */
+    align-items: flex-start; /* Add this */
+}
+
+.inner-wrapper li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    flex-basis: calc(33.333% - 20px); /* Add this */
+    box-sizing: border-box; /* Add this */
+    margin-right: 20px; /* Add this */
+}
+
+.inner-wrapper li:nth-child(3n) {
+    margin-right: 0; /* Add this */
+}
+
+/* ... (previous CSS code) ... */
+
+
+
+
+.inner-wrapper li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+}
+
+.inner-wrapper li:nth-child(1) {
+    color: #F44336;
+}
+
+.inner-wrapper li:nth-child(2) {
+    color: #E91E63;
+}
+
+.inner-wrapper li:nth-child(3) {
+    color: #9C27B0;
+}
+
+.inner-wrapper li:nth-child(4) {
+    color: #673AB7;
+}
+
+.inner-wrapper li:nth-child(5) {
+    color: #3F51B5;
+}
+
+.inner-wrapper li:nth-child(6) {
+    color: #2196F3;
+}

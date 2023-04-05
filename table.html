@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Table</title>
+<style>
+  .table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+
+  .row {
+    display: table-row;
+  }
+
+  .cell {
+    display: table-cell;
+    padding: 4px;
+  }
+
+  .header {
+    background-color: blue;
+    color: white;
+  }
+
+  .odd {
+    background-color: green;
+  }
+
+  .even {
+    background-color: white;
+  }
+
+  .left {
+    width: 40%;
+  }
+
+  .mid, .right {
+    width: 30%;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="table">
+    <div class="row">
+      <div class="cell header left">Title 1</div>
+      <div class="cell header mid">Title 2</div>
+      <div class="cell header right">Title 3</div>
+    </div>
+    <div class="row odd">
+      <div class="cell left">Row 1, Column 1</div>
+      <div class="cell mid">Row 1, Column 2</div>
+      <div class="cell right">Row 1, Column 3</div>
+    </div>
+    <div class="row even">
+      <div class="cell left">Row 2, Column 1</div>
+      <div class="cell mid">Row 2, Column 2</div>
+      <div class="cell right">Row 2, Column 3</div>
+    </div>
+    <div class="row odd">
+      <div class="cell left">Row 3, Column 1</div>
+      <div class="cell mid">Row 3, Column 2</div>
+      <div class="cell right">Row 3, Column 3</div>
+    </div>
+    <div class="row even">
+      <div class="cell left">Row 4, Column 1</div>
+      <div class="cell mid">Row 4, Column 2</div>
+      <div class="cell right">Row 4, Column 3</div>
+    </div>
+    <div class="row odd">
+      <div class="cell left">Row 5, Column 1</div>
+      <div class="cell mid">Row 5, Column 2</div>
+      <div class="cell right">Row 5, Column 3</div>
+    </div>
+  </div>
+</body>
+</html>

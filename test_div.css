@@ -128,26 +128,20 @@ p {
     background-color: #FFEB3B;
 }
 
+.wrapper-2{
+    display: flex;
+    flex-direction: row;
+}
+
 .outer-wrapper {
     background-color: pink;
     padding: 20px;
-    display: flex;
-    flex-direction: row; /* Change this from column to row */
+    flex-basis: 50%; /* Add this */
+    box-sizing: border-box; /* Add this */
 }
 
-.left-wrapper,
-.right-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.left-wrapper {
-    margin-right: 10px;
-}
-
-.right-wrapper {
-    margin-left: 10px;
+.outer-wrapper:nth-child(2) {
+    margin-left: 20px; /* Add this */
 }
 
 .inner-wrapper {
@@ -156,16 +150,18 @@ p {
     align-items: flex-start;
 }
 
+/* ... (previous CSS code) ... */
+
 .bird-type,
 .fish-type {
     list-style: none;
     position: relative;
     padding-left: 34px;
     margin-bottom: 20px;
-    flex-basis: calc(50% - 20px); /* Change this from 25% to 50% */
+    flex-basis: calc(50% - 20px);
     box-sizing: border-box;
     margin-right: 20px;
-    color: black;
+    color: black; /* Set the text color to black */
     font-size: 0.8em;
     font-weight: bold;
     line-height: 1.2;
@@ -183,39 +179,34 @@ p {
     background-color: currentColor;
 }
 
-.bird-type:nth-child(1)::before {
+/* ... (previous CSS code for colors) ... */
+
+.bird-type:nth-child(1)::before,
+.fish-type:nth-child(1)::before {
     background-color: #F44336;
 }
 
-.bird-type:nth-child(2)::before {
+.bird-type:nth-child(2)::before,
+.fish-type:nth-child(2)::before {
     background-color: #E91E63;
 }
 
-.bird-type:nth-child(3)::before {
+.bird-type:nth-child(3)::before,
+.fish-type:nth-child(3)::before {
     background-color: #9C27B0;
 }
 
-.bird-type:nth-child(4)::before {
+.bird-type:nth-child(4)::before,
+.fish-type:nth-child(4)::before {
     background-color: #673AB7;
 }
 
-.fish-type:nth-child(1)::before {
+.fish-type:nth-child(5)::before {
     background-color: #3F51B5;
 }
 
-.fish-type:nth-child(2)::before {
+.fish-type:nth-child(6)::before {
     background-color: #2196F3;
 }
 
-.fish-type:nth-child(3)::before {
-    background-color: #4CAF50;
-}
-
-.fish-type:nth-child(4)::before {
-    background-color: #f29094;
-}
-
-.separator {
-    width: 20px; /* Add this */
-    background-color: white; /* Add this */
-}
+/* ... (previous CSS code) ... */
